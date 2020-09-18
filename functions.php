@@ -7,6 +7,48 @@ function show ($data) {
   echo '</pre>';
 }
 
+
+function show_category () {
+    global $post;
+    $postcat = get_the_category( $post->ID );
+
+    // try print_r($postcat) ;  
+
+    if ( ! empty( $postcat ) ) {
+        echo esc_html( $postcat[0]->name );   
+    }
+}
+
+
+// Return True if page is not part of the normal settings.se site
+// but rather 
+function is_mam_page() {
+    $result = False;
+    $postcat = get_the_category( $post->ID );
+    
+    if  (is_single() && $postcat[0]->slug == "raoulwallenberg2020") {
+        $result = True;
+    }
+
+    if (is_page(981)){
+        $result = True;
+    }
+    return $result;
+
+}
+
+
+function show_navigation () {
+
+    $result = True;
+    if (is_mam_page()){
+        $result = False;
+    }
+    return $result;
+}
+
+
+
 require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/navigation.php';
 require get_template_directory() . '/inc/template-tags.php';
