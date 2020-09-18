@@ -355,7 +355,7 @@ th {
 
 @font-face {
   font-family: 'Equality';
-  src: url("/wp-content/themes/settings_wordpress/src/styles/mam/Equality-Regular.woff") format("woff"), url("/wp-content/themes/settings_wordpress/src/styles/mam/Equality-Regular.woff2") format("woff2");
+  src: url("/wp-content/themes/settings/src/styles/mam/Equality-Regular.woff") format("woff"), url("/wp-content/themes/settings/src/styles/mam/Equality-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
@@ -370,7 +370,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
-  background-image: url(/wp-content/themes/settings_wordpress/src/images/mam/spray_green_scaled.png), url(/wp-content/themes/settings_wordpress/src/images/mam/spray_lila_scaled.png);
+  background-image: url(/wp-content/themes/settings/src/images/mam/spray_green_scaled.png), url(/wp-content/themes/settings/src/images/mam/spray_lila_scaled.png);
   background-position: right top, left top;
   background-repeat: no-repeat;
   background-size: 35%; }
@@ -437,7 +437,7 @@ div#content {
           text-align: right; }
 
 div#mamhero {
-  background-image: url(/wp-content/themes/settings_wordpress/src/images/mam/hand_scaled.png);
+  background-image: url(/wp-content/themes/settings/src/images/mam/hand_scaled.png);
   background-position: -4rem -2rem;
   background-size: 450px;
   background-repeat: no-repeat;
