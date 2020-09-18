@@ -484,4 +484,7 @@ article {
     float: left;
     display: inline-block;
     padding-right: 2rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 2rem;
+    width: 40%; }
+    article div.imagecontainer img {
+      width: 100%; }
