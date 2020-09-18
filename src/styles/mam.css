@@ -469,3 +469,19 @@ div#navigation {
         font-family: 'Equality', sans-serif;
         font-size: 2rem;
         padding-left: 3rem; }
+
+article {
+  width: 700px; }
+  article div#articleheader p.pubdate {
+    font-style: italic; }
+  article div#articleheader p.title {
+    font-family: 'Equality', sans-serif;
+    font-size: 1.5rem; }
+  article div#articleheader p.school {
+    font-size: 0.7rem;
+    font-weight: bold; }
+  article div.imagecontainer {
+    float: left;
+    display: inline-block;
+    padding-right: 2rem;
+    padding-bottom: 2rem; }
