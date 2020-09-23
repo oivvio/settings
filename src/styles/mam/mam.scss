@@ -1,223 +1,298 @@
 @import "normalize";
 
 @font-face {
-    font-family: 'Equality';
-    src: url('/wp-content/themes/settings/src/styles/mam/Equality-Regular.woff') format('woff'),
-	 url('/wp-content/themes/settings/src/styles/mam/Equality-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Equality";
+  src: url("/wp-content/themes/settings/src/styles/mam/Equality-Regular.woff")
+      format("woff"),
+    url("/wp-content/themes/settings/src/styles/mam/Equality-Regular.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-
 
 $yellow: #ffff3c;
 $purple: #a6aff7;
 $pink: e7067b;
 
+$contentwidth: 900px;
+
 html {
-    font-size: 10px;
-    margin-top: 0px !important;
+  font-size: 14px;
+  margin-top: 0px !important;
 }
 
 body {
-    background-color: $yellow;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
+  background-color: $yellow;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
 
-    background-image: url(/wp-content/themes/settings/src/images/mam/spray_green_scaled.png), url(/wp-content/themes/settings/src/images/mam/spray_lila_scaled.png);
-    background-position: right top, left top;
-    background-repeat: no-repeat;
-    background-size: 35%;
-
+  background-image: url(/wp-content/themes/settings/src/images/mam/spray_green_scaled.png),
+    url(/wp-content/themes/settings/src/images/mam/spray_lila_scaled.png);
+  background-position: right top, left top;
+  background-repeat: no-repeat;
+  background-size: 35%;
 }
 
 p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 div#content {
-    width: 700px;
+  width: $contentwidth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30vh;
+
+  div#preamble {
+    margin-bottom: 3rem;
+    width: 600px;
+
+    h1 {
+      font-size: 2.3rem;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+  }
+
+  div#posts {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    div#preamble {
+    div.post {
+      box-sizing: border-box;
+      padding: 1rem;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
 
-	margin-bottom: 3rem;
-	width: 450px;
+      transition-property: all;
+      transition-duration: 0.5s;
 
+      &:hover {
+        box-shadow: 0 0 20px $purple;
+        cursor: pointer;
+        transform: rotate(-1deg);
+      }
 
-	h1 {
-	    font-size: 2.3rem;
-	    font-family: 'Source Sans Pro', sans-serif;
-	}
-	
-	
+      width: 33%;
+
+      div.imagecontainer {
+        // Make images square
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        img {
+          object-fit: cover;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+
+        // margin-top: 3px;
+        // margin-bottom: 3px;
+
+        &.school {
+          font-size: 0.7rem;
+          font-weight: bold;
+        }
+
+        &.title {
+          font-family: "Equality", sans-serif;
+          font-size: 1rem;
+          line-height: 100%;
+        }
+
+        &.excerpt {
+          margin-top: 10px;
+        }
+
+        &.pubdate {
+          font-style: italic;
+        }
+        &.fakelink {
+          color: $pink;
+          text-align: right;
+        }
+      }
     }
-
-    div#posts {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-
-
-	div.post {
-	    box-sizing: border-box;
-	    padding: 1rem;
-	    padding-bottom: 3rem;
-	    margin-bottom: 3rem;
-
-	    transition-property: all;
-	    transition-duration: 0.5s;
-
-	    
-	&:hover {
-	    box-shadow:  0 0 20px $purple;	    
-	    cursor: pointer;
-	    rotate: -1deg;
-	}
-	    
-	    width: 33%;
-	    
-	    div.imagecontainer {
-
-		// Make images square
-		position: relative;
-		width: 100%;
-		padding-bottom: 100%;
-		img {
-		    object-fit: cover; 
-		    position: absolute;
-		    width: 100%;
-		    height: 100%;
-		}
-	    }
-
-	    p {
-		font-size: 1rem;
-
-		// margin-top: 3px;
-		// margin-bottom: 3px;		
-
-		&.school {
-		    font-size: 0.7rem;
-		    font-weight: bold;
-		}
-
-		&.title {
-		    font-family: 'Equality', sans-serif;
-		    font-size: 1rem;
-		    line-height: 100%;		    
-		}
-
-		&.excerpt {
-		    margin-top: 10px;
-		}
-
-		&.pubdate {
-		    font-style: italic;
-		}
-		&.fakelink {
-		    color: $pink;
-		    text-align: right;
-		}
-	    }
-	}
-    }
+  }
 }
 
-	div#mamhero {
-	    background-image: url(/wp-content/themes/settings/src/images/mam/hand_scaled.png);
-	    background-position: -4rem -2rem;
-	    background-size: 450px;
-	    background-repeat: no-repeat;
+div#mamhero {
+  background-image: url(/wp-content/themes/settings/src/images/mam/hand_scaled.png);
+  background-position: 7rem -2rem;
+  background-size: 450px;
+  background-repeat: no-repeat;
 
-	    height: 500px;
-	    width: 450px;
-	    position: relative;
+  height: 500px;
+  width: 450px;
+  position: relative;
 
-	    
-	    div#herotext  {
-		position: absolute;
+  div#herotext {
+    position: absolute;
 
-		bottom: 0px;
-		left: 0px;
-		p {
-		    font-family: 'Equality', sans-serif;
-		    font-size: 3rem;
-		    font-weight: bold;
-		    line-height: 1rem;
-		}		
-		
-	    }
- 	}
-
+    bottom: 0px;
+    left: 0px;
+    p {
+      font-family: "Equality", sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1rem;
+    }
+  }
+}
 
 div#navigation {
-    position: fixed;
-    bottom: 0;
-    height: 5rem;
-    width: 100vw;
-    background-color: $purple;
+  position: fixed;
+  bottom: 0;
+  height: 5rem;
+  width: 100vw;
+  background-color: $purple;
 
-    ul {
-	list-style: none;
-	
-	li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  ul {
+    width: $contentwidth;
+    list-style: none;
+    display: flex;
 
-	    display: inline-block;
-	    a {
-		color: $yellow;
-		font-family: 'Equality', sans-serif;
-		font-size: 2rem;
+    flex-direction: row;
+    padding: 0px;
 
-		padding-left: 3rem;
-	    }
+    li {
+      display: inline-block;
+      a {
+        color: $yellow;
+        font-family: "Equality", sans-serif;
+        font-size: 2rem;
+        padding-left: 1rem;
 
-	    
-	}
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.first {
+        padding-right: 3rem;
+      }
+
+      &.keepright {
+        margin-left: auto;
+      }
     }
+  }
 }
-
 
 // This relates to a single post
 
 article {
+  width: 700px;
+  padding-bottom: 30vh;
 
-    width: 700px;
-    div#articleheader {
-	p.pubdate {
-	    font-style: italic;
-	}
+  div#articleheader {
+    p.pubdate {
+      font-style: italic;
+    }
     p.title {
-		font-family: 'Equality', sans-serif;
-		font-size: 1.5rem;
+      font-family: "Equality", sans-serif;
+      font-size: 1.5rem;
     }
     p.school {
-		    font-size: 0.7rem;
-		    font-weight: bold;
-	
+      font-size: 0.7rem;
+      font-weight: bold;
     }
-		    
+  }
+  div.imagecontainer {
+    float: left;
+    display: inline-block;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    width: 40%;
+    img {
+      width: 100%;
     }
-    div.imagecontainer {
-	float: left;
-	display:inline-block;
-	padding-right: 2rem;
-	padding-bottom: 2rem;
-	width: 40%;
-	img {
-	    width: 100%;
-	}
+  }
+}
+
+// Mobile
+@media all and (max-width: 480px) {
+  $mobilecontentwidth: 95vw;
+  body {
+    div#content {
+      width: 100vw;
+
+      div#preamble {
+        width: $mobilecontentwidth;
+        margin-bottom: 3rem;
+      }
+
+      div#posts {
+        div.post {
+          width: $mobilecontentwidth;
+          &:hover {
+            transform: none;
+          }
+        }
+      }
     }
+  }
+
+  div#navigation {
+    height: 10vh;
+    width: 100vw;
+
+    ul {
+      width: $mobilecontentwidth;
+
+      // background-color: lightyellow;
+      li {
+        // background-color: lightblue;
+        a {
+          // background-color: pink;
+          font-size: 0.9rem;
+          padding-left: 0rem;
+          text-decoration: underline;
+        }
+
+        &.first {
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+
+  div#mamhero {
+    background-position: 50% 0%;
+    background-size: 80vw;
+
+    height: 60vh;
+    width: 95vw;
+    position: relative;
+
+    div#herotext {
+      p {
+        font-size: 3rem;
+        line-height: 1rem;
+      }
+    }
+  }
+
+  article {
+    width: $mobilecontentwidth;
+  }
 }

@@ -10,7 +10,7 @@
 
 
 
-<link rel="stylesheet" href=" <?php if (is_mam_page()) {asset_url('src/styles/mam.css?v1'); } else {asset_url('src/styles/settings.css?v12'); } ?>">
+<link rel="stylesheet" href=" <?php if (is_mam_page()) {asset_url('src/styles/mam.css?v2'); } else {asset_url('src/styles/settings.css?v12'); } ?>">
 <script>document.documentElement.classList.remove('no-script');</script>
 
 <body class="Site-body <?php  if ( is_mam_page() ) { echo  'mam'; }   ; ?> ">

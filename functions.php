@@ -26,7 +26,7 @@ function is_mam_page() {
     $result = False;
     $postcat = get_the_category( $post->ID );
     
-    if  (is_single() && $postcat[0]->slug == "raoulwallenberg2020") {
+    if  (is_single() && strpos($postcat[0]->slug,"raoulwallenberg2020") !== false) {
         $result = True;
     }
 

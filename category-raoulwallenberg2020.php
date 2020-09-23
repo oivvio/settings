@@ -1,6 +1,10 @@
 <head>
    <link rel="stylesheet" href="<?php asset_url('src/styles/mam.css?v1'); ?>">
-   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">                  </head>
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+   
+   
 
 
 <div id="content">
